@@ -1,0 +1,29 @@
+﻿
+<div class="row" style="min-height:800px;">
+
+    <div class="col-sm-offset-3 col-sm-6 form-group" style="text-align:center; margin-top:3%;">
+        <label>Tražilica</label>
+        <input type="text" placeholder="Search by username" class="form-control" [(ngModel)]="searching" name="searching">
+    </div>
+
+    <button type="button" class="btn btn-default  col-sm-offset-3 col-sm-6" style="text-align:center;margin-top:3%;" (click)="istina()">Show all users</button>
+    <button type="button" class="btn btn-default  col-sm-offset-3 col-sm-6" style="text-align:center;margin-top:3%;" (click)="resetUsers()">Reset all users</button>
+
+
+    <div *ngIf="ucitano == true">
+        <button type="button" class="btn btn-default  col-sm-offset-3 col-sm-6" style="text-align:center;margin-top:3%;" (click)="searchUsers()">Search users</button>
+
+
+
+        <ul class="nav navbar-nav col-sm-12" style="text-align:center;margin-top:3%;" *ngFor="#user of korisnici">
+            <li class="col-sm-12 list-group-item panel panel-danger" style="border-color:#b92c43;height:50px;"><label>Korisnik:    {{user.username}}</label></li>
+            <li class="col-sm-4 list-group-item panel panel-danger" style="text-align:center;height:50px;"><div style=""><label style="height:50px;">Korisničko ime:   </label>   {{user.name}}</div></li>
+            <li class="col-sm-4 list-group-item panel panel-danger" style="text-align:center;height:50px;"><div style=""><label style="height:50px;">Prezime:   </label>   {{user.lastname}}</div></li>
+            <li class="col-sm-4 list-group-item panel panel-danger" style="text-align:center;height:50px;"><div style=""><label style="height:50px;">Email:   </label>   {{user.email}}</div></li>
+
+        </ul>
+    </div>
+
+
+
+        </div>

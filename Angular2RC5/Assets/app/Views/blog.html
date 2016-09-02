@@ -1,0 +1,137 @@
+﻿<!-- Page Content -->
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+
+    <h1 class="well" style="text-align:center;">Kontakt</h1>
+
+
+
+
+    <!-- /.row -->
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-md-8">
+            <!-- Embedded Google Map
+            <img data-holder-rendered="true" src="/pics/karta.jpg" class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto">-->
+            <header class=" row">
+                <div class="col-lg-12 noPadding map">
+                    <img class="img-responsive business-header " src="/pics/karta.jpg" alt="">
+                </div>
+
+            </header>
+
+        </div>
+        <!-- Contact Details Column -->
+        <div class="col-md-4">
+            <h3>Kontakt</h3>
+            <p>
+                <i class="fa fa-map-marker fa-2x"></i>
+                <abbr title="Lokacija">Lokacija</abbr>:Vanikina 19, Zagreb, Hrvatska
+            </p>
+
+            <p>
+                <i class="fa fa-phone fa-2x"></i>
+                <abbr title="Telefon">Telefon</abbr>: (01) 6672-523
+            </p>
+            <p>
+                <i class="fa fa-fax fa-2x"></i>
+                <abbr title="Fax">Fax</abbr>: (01) 7890-162
+            </p>
+            <p>
+                <i class="fa fa-envelope-o fa-2x"></i>
+                <abbr title="Email">Email</abbr>: <a href="mailto:tpokrica@tocka-pokrica.hr">tpokrica@tocka-pokrica.hr</a>
+            </p>
+            <p>
+                <i class="fa fa-clock-o fa-2x"></i>
+                <abbr title="Radno vrijeme">Radno vrijeme</abbr>: Ponedjeljak - Petak: 8:00 - 16:00
+            </p>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Contact Form -->
+    <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                    <fieldset>
+                        <legend class="text-center header">Pošaljite nam poruku</legend>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="fname" name="name" type="text" placeholder="Ime i prezime" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="lname" name="name" type="text" placeholder="Email adresa" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="email" name="email" type="text" placeholder="Telefon" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="phone" name="phone" type="text" placeholder="Ime poduzeća" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <textarea class="form-control" id="message" name="message" placeholder="Unesite svoju poruku ovdje." rows="7"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.row -->
+    <hr>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+    jQuery(function ($) {
+        function init_map1() {
+            var myLocation = new google.maps.LatLng(45.7797483, 15.9940090);
+            var mapOptions = {
+                center: myLocation,
+                zoom: 16
+            };
+            var marker = new google.maps.Marker({
+                position: myLocation,
+                title: "Property Location"
+            });
+            var map = new google.maps.Map(document.getElementById("map1"),
+                mapOptions);
+            marker.setMap(map);
+        }
+        init_map1();
+    });
+    </script>
+    <style>
+        .map {
+            min-width: 300px;
+            min-height: 500px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .header {
+            background-color: #F5F5F5;
+            color: #36A0FF;
+            height: 70px;
+            font-size: 27px;
+            padding: 10px;
+        }
+    </style>
+    <!-- Contact with Map - END -->
+</div>
+

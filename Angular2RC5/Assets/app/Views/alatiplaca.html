@@ -1,0 +1,65 @@
+﻿<div class="row">
+    <my-alatinavbar></my-alatinavbar>
+    <br>
+    <br>
+    <br>
+    <div class="col-lg-12" style="text-align:center;">
+        <h2 class="page-header">Kalkulator za izračun neto i bruto iznosa plaće</h2>
+    </div>
+    <form>
+        <div class="form-group  col-sm-offset-3 col-sm-6">
+            <label for="iznos">Iznos:</label>
+            <input type="text" class="form-control" id="iznos" [(ngModel)]="iznos" name="iznos">
+        </div>
+        <br>
+        <br>
+        <div class="form-group  col-sm-offset-3 col-sm-6">
+            <label for="brojDjece">Broj djece:</label>
+            <input type="text" class="form-control" id="brojDjece" ngControl="brojDjece">
+        </div>
+        <br>
+        <br>
+        <div class="form-group  col-sm-offset-3 col-sm-6">
+            <label for="brojUzd">Broj uzdržavanih:</label>
+            <input type="text" class="form-control" id="brojUzd" ngControl="brojUzd">
+        </div>
+        <br>
+        <br>
+        <div class="form-group col-sm-offset-3 col-sm-6">
+            <label for="invaliditet">Invaliditet(select one):</label>
+            <select class="form-control" id="invaliditet" ngControl="invaliditet">
+                <option value="0" selected="selected">Bez invaliditeta</option>
+                <option value="1" selected="selected">Sa invaliditetom</option>
+                <option value="2" selected="selected">100%invaliditet</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <div class="col-sm-12" style="margin-bottom:2%;">
+        <button type="button" class="btn btn-default col-sm-offset-3 col-sm-3" (click)="izracunajBruto()">Bruto plaća</button>
+       
+        <button type="button" class="btn btn-default  col-sm-3" (click)="izracunajNeto()">Neto plaća</button>
+        </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="col-sm-offset-2 col-sm-8" style="text-align:center;" *ngIf="bruto > 0">
+        <h2 class="page-header">Bruto plaća {{bruto}}</h2>
+    </div>
+
+    <div class="col-sm-offset-2 col-sm-8" style="text-align:center;"*ngIf="neto > 0">
+        <h2 class="page-header">Neto plaća {{neto}}</h2>
+    </div>
+   
+</div>

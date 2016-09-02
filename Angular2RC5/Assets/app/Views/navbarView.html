@@ -1,0 +1,18 @@
+﻿<div class="navbar-collapse collapse row navbarLook" style="padding-right:0px; ">
+
+    <ul class="nav navbar-nav  list1 col-md-9 " >
+        <li class="col-md-2 navLinks " *ngFor="#navItem of navItems"><a class="navFont" routerLink={{navItem.link}}>{{navItem.name}}</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right col-md-3 " >
+        <li class="navrLinks col-md-6" *ngFor="#navrItem of navrItems"><a class="navFont" routerLink={{navrItem.link}}>{{navrItem.name}}</a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right col-md-3" *ngIf="istina == true">
+        <li class="navrLinks col-md-6" *ngFor="#navrItem of navrItems"><a class="navFont" >{{logiraniKorisnik.name}}</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right col-md-3 " *ngIf="istina == true">
+        <li class="navrLinks col-md-6" *ngFor="#navrItem of navrItems"><a class="navFont" >{{logiraniKorisnik.lastname}}</a></li>
+    </ul>
+       
+    
+</div>

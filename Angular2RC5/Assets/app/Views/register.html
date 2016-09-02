@@ -1,0 +1,49 @@
+﻿
+
+<h1 class="well" style="text-align:center;">Registracija</h1>
+
+
+    <div class="row">
+        <form (ngSubmit)="register()" #myregister="ngForm">
+        <!--<form #myregister="ngForm">-->
+            <div class="col-sm-12">
+
+                <div class="col-sm-offset-3 col-sm-6 form-group">
+                    <label>Ime</label>
+                    <input type="text" placeholder="Ovdje unesite ime.." class="form-control" [(ngModel)]="newUser.name" name="name">
+                </div>
+                <div class="col-sm-offset-3 col-sm-6 form-group">
+                    <label>Prezime</label>
+                    <input type="text" placeholder="Ovdje unesite prezime.." class="form-control" [(ngModel)]="newUser.lastname" name="lastname">
+                </div>
+
+
+                <div class="col-sm-offset-3 col-sm-6 form-group">
+                    <label>Korisničko ime</label>
+                    <input type="text" placeholder="Ovdje unesite željeno korisničko ime.." class="form-control"[(ngModel)]="newUser.username" name="username">
+                </div>
+
+                <div class="col-sm-offset-3 col-sm-6 form-group">
+                    <label>Lozinka</label>
+                    <input type="text" placeholder="Ovdje unesite željenu lozinku.." class="form-control"[(ngModel)]="newUser.password" name="password">
+                </div>
+                <div class="col-sm-offset-3 col-sm-6 form-group">
+                    <label>Ponovljena lozinka</label>
+                    <input type="text" placeholder="Ovdje ponovo unesite željenu lozinku.." class="form-control"[(ngModel)]="newUser.repeatPassword" name="repeatPassword">
+                </div>
+
+                <div class="col-sm-offset-3 col-sm-6 form-group">
+                    <label>Email adresa</label>
+                    <input type="text" placeholder="Ovdje unesite email adresu.." class="form-control"[(ngModel)]="newUser.email" name="email">
+                </div>
+
+                <button class="btn btn-lg btn-info col-sm-offset-5 col-sm-2" type="submit" [disabled]="newUser.password != newUser.repeatPassword">Registriraj</button>
+                <!--<button  class="btn btn-lg btn-info col-sm-offset-5 col-sm-2" (click)="register()"  [disabled]="newUser.password != newUser.repeatPassword">Registriraj</button>-->
+            </div>
+        </form>
+    </div>
+
+
+<br>
+<br>
+<br>
